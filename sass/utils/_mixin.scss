@@ -1,0 +1,28 @@
+@mixin styleButton($bg-color, $color, $py, $px, $bd-color, $bd-radius) {
+  background-color: $bg-color;
+  color: $color;
+  padding: $py $px;
+  border: 1px solid $bd-color;
+  border-radius: $bd-radius;
+}
+
+@mixin styleHoverButton($bg-color, $color, $bd-color) {
+  background-color: $bg-color;
+  color: $color;
+  border-color: $bd-color;
+}
+
+@mixin responsive($screen) {
+  @if (map-has-key($map: $breakpoints, $key: $screen)) {
+    // map-get: trả ra giá trị của màn hình mà mình nhập vào
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $screen,
+    );
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @error 'Screen does not exist';
+  }
+}

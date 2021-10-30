@@ -1,0 +1,148 @@
+header {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  z-index: 9;
+  transition: all 0.5s;
+  .eyebrow {
+    .topnav {
+      background-color: #f3f3f3;
+
+      display: flex;
+      flex-direction: row;
+      max-width: 1440px;
+      margin: 0;
+      // .topnav__content {
+      // padding: 5px 30px;
+      z-index: 999;
+      .topnav__item {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        .item__logo {
+          height: 30px;
+          width: 50px;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+        span {
+          font-size: 12px;
+          color: $color-blue-3;
+          border-right: 1px solid;
+          padding-right: 10px;
+        }
+      }
+      // }
+    }
+  }
+
+  .nav {
+    // padding: 10px 30px;
+    display: flex;
+    max-width: 1440px;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 999;
+    background-color: #fff;
+
+    .nav__list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .list__item {
+        font-size: 13px;
+        padding: 10px 10px;
+        color: $color-blue-1;
+        font-weight: 600;
+        cursor: pointer;
+        &.listActive {
+          border-bottom: 2px solid;
+        }
+        &.img {
+          padding: 0;
+        }
+      }
+
+      .nav__logo {
+        width: 150px;
+        height: 50px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  .list__listCar {
+    position: absolute;
+    height: 82vh;
+    padding: 0 30px;
+    width: 100%;
+    transform: translateY(-100%);
+    background-color: #fff;
+    z-index: -1;
+    transition: all 0.5s;
+    overflow-x: hidden;
+    .listCar {
+      overflow-y: scroll;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transition: all 0.5s;
+      transform: translateY(-100%);
+      .car__item {
+        width: 16.666%;
+        padding-top: 100px;
+        .car__logo {
+          width: 80%;
+          height: 150px;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+        .car__name {
+          color: #102b4e;
+          font-size: 14px;
+          cursor: pointer;
+        }
+        .car__price {
+          font-size: 12px;
+          color: gray;
+        }
+        .car__option {
+          color: $color-blue-0;
+          border-bottom: 1px solid;
+        }
+      }
+      .car__btn {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}
+// @media (min-width: 1440px) {
+//   header {
+//     width: 1440px;
+//   }
+// }
+@media (max-width: 1199px) {
+  header {
+    .eyebrow {
+    }
+    .nav {
+      .nav__list {
+        .list__item {
+          padding: 10px 5px;
+          &.account {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

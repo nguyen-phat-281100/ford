@@ -1,0 +1,22 @@
+// Không chứa code css, chỉ chứa đường dẫn tới các file con
+
+// utils
+@import "./utils/variables";
+@import "./utils/mixin";
+
+// base
+@import "./base/reset";
+@import "./base/customize";
+
+// components
+@import "./components/button";
+
+// layouts
+@import "./layouts/header";
+@import "./layouts/footer";
+
+// .......
+@import "./pages/Home/banner";
+@import "./pages/Home/vehicle";
+@import "./pages/Home/grid";
+@import "./pages/Home/disclosure";
